@@ -21,7 +21,7 @@ module MaterializePagination
     end
 
     # @return [String] rendered previous and next arrow links
-    def previous_or_next_page(page, text, classname)
+    def previous_or_next_page(page, text, classname, aria_label = nil)
       classes = [(classname if @options[:page_links]), (page ? 'waves-effect' : 'disabled')].join(' ')
       direction = classname == 'previous_page' ? :left : :right
 
